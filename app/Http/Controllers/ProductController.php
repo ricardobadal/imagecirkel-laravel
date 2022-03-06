@@ -9,8 +9,12 @@ class ProductController extends Controller
 {
     private static function getData() {
         return [
-            ['id' => 1, 'name' => 'firstproduct', 'price' => 14.99],
-            ['id' => 2, 'name' => 'secondproduct', 'price' => 9.99],
+            ['id' => 1, 'name' => 'first', 'price' => 14.99],
+            ['id' => 2, 'name' => 'second', 'price' => 9.99],
+            ['id' => 3, 'name' => 'third', 'price' => 7.99],
+            ['id' => 4, 'name' => 'fourth', 'price' => 19.99],
+            ['id' => 5, 'name' => 'fifth', 'price' => 4.99],
+            ['id' => 6, 'name' => 'sixth', 'price' => 12.99],
         ];
     }
     /**

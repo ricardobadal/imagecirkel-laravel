@@ -11291,7 +11291,7 @@ textarea.form-control-lg {
   /* 1 */
   width: 30em;
   height: 30em;
-  padding: 0;
+  padding: 5;
   border-radius: 50%;
   list-style: none;
   /* 2 */
@@ -11307,33 +11307,33 @@ textarea.form-control-lg {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 6em;
-  height: 6em;
+  width: 5em;
+  height: 5em;
   margin: -3em;
 }
 
 .circle-container > :nth-of-type(1) {
-  transform: rotate(30deg) translate(15em) rotate(-30deg);
+  transform: rotate(270deg) translate(20em) rotate(-270deg);
 }
 
 .circle-container > :nth-of-type(2) {
-  transform: rotate(90deg) translate(15em) rotate(-90deg);
+  transform: rotate(330deg) translate(20em) rotate(-330deg);
 }
 
 .circle-container > :nth-of-type(3) {
-  transform: rotate(150deg) translate(15em) rotate(-150deg);
+  transform: rotate(30deg) translate(20em) rotate(-30deg);
 }
 
 .circle-container > :nth-of-type(4) {
-  transform: rotate(210deg) translate(15em) rotate(-210deg);
+  transform: rotate(90deg) translate(20em) rotate(-90deg);
 }
 
 .circle-container > :nth-of-type(5) {
-  transform: rotate(270deg) translate(15em) rotate(-270deg);
+  transform: rotate(150deg) translate(20em) rotate(-150deg);
 }
 
 .circle-container > :nth-of-type(6) {
-  transform: rotate(330deg) translate(15em) rotate(-330deg);
+  transform: rotate(210deg) translate(20em) rotate(-210deg);
 }
 
 .circle-container img {
@@ -11343,5 +11343,5 @@ textarea.form-control-lg {
 }
 
 .circle-container li:last-child img {
-  transform: scale(4);
+  transform: scale(6);
 }
