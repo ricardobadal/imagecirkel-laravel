@@ -3,37 +3,23 @@
 @section('content')
 @section('title', 'product')
 
-<div><h1>product specific page</h1>
+<div><h1>product page</h1>
     <div>
         <p><i> For now this is a temporary static array which is found in ProductController</i></p>
     </div>
+    <div class='circle-container shadow'>
+        @foreach ($products as $product)
+            <p>
+                <button class="btn btn-outline-danger shadow">
+                    <h5> {{ $product['name'] }} </h5>
+                    <img src="images/greendragon.jpg">{{ $product['price'] }}
+                </button>
+            </p>
+        @endforeach
 
-    @foreach ($products as $product)
-        <div class="container">
-            <div class="row mx-auto sm:px-6 lg:px-8">
-                <div class="col-6 shadow">
-                    <h3> name: {{ $product['name'] }}
-                        <ul>
-                            <li>id: {{ $product['id'] }}</li>
-                            <li>Price: {{ $product['price'] }}</li>
-                            <p> Click <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">here</a> for More info about our products 
-                        </ul>
-                    <h3>
-                </div>
-            </div>
-        </div>
-    @endforeach
-
-    <ul class='circle-container shadow'>
-        <li><button class="btn btn-outline-danger shadow"><img src="images/greendragon.jpg">View</li>
-        <li><button class="btn btn-outline-danger shadow"><img src="images/greendragon.jpg">View</li>
-        <li><button class="btn btn-outline-danger shadow"><img src="images/greendragon.jpg">View</li>
-        <li><button class="btn btn-outline-danger shadow"><img src="images/greendragon.jpg">View</li>
-        <li><button class="btn btn-outline-danger shadow"><img src="images/greendragon.jpg">View</li>
-        <li><button class="btn btn-outline-danger shadow"><img src="images/greendragon.jpg">View</li>
-        <li><button class="btn btn-outline-danger shadow">Show Selected Image</li>
-    </ul>
+        <p class="mid-product flex text-center shadow">selected product</p>
     
+    </div>
 </div>
 
 @endsection
