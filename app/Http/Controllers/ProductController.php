@@ -9,12 +9,12 @@ class ProductController extends Controller
 {
     private static function getData() {
         return [
-            ['id' => 1, 'name' => 'first', 'price' => 14.99],
-            ['id' => 2, 'name' => 'second', 'price' => 9.99],
-            ['id' => 3, 'name' => 'third', 'price' => 7.99],
-            ['id' => 4, 'name' => 'fourth', 'price' => 19.99],
-            ['id' => 5, 'name' => 'fifth', 'price' => 4.99],
-            ['id' => 6, 'name' => 'sixth', 'price' => 12.99],
+            ['id' => 1, 'name' => 'first', 'price' => 14.99, 'images' => '/images/dragon1.png'],
+            ['id' => 2, 'name' => 'second', 'price' => 9.99, 'images' => '/images/dragon2.png'],
+            ['id' => 3, 'name' => 'third', 'price' => 7.99, 'images' => '/images/dragon3.png'],
+            ['id' => 4, 'name' => 'fourth', 'price' => 19.99, 'images' => '/images/dragon4.png'],
+            ['id' => 5, 'name' => 'fifth', 'price' => 4.99, 'images' => '/images/dragon5.png'],
+            ['id' => 6, 'name' => 'sixth', 'price' => 12.99, 'images' => '/images/dragon6.png'],
         ];
     }
     /**
