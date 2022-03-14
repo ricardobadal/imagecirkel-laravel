@@ -20,7 +20,6 @@ Auth::routes();
 //HomeController Routes
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/shop', [HomeController::class, 'shop'])->name('home.shop');
-Route::get('/product', [HomeController::class, 'product'])->name('home.product');
 Route::get('/about', [HomeController::class, 'about'])->name('home.about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 

@@ -4,19 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-
+use DB;
 class ProductController extends Controller
 {
-    private static function getData() {
-        return [
-            ['id' => 1, 'name' => 'first', 'price' => 14.99, 'images' => '/images/dragon1.png'],
-            ['id' => 2, 'name' => 'second', 'price' => 9.99, 'images' => '/images/dragon2.png'],
-            ['id' => 3, 'name' => 'third', 'price' => 7.99, 'images' => '/images/dragon3.png'],
-            ['id' => 4, 'name' => 'fourth', 'price' => 19.99, 'images' => '/images/dragon4.png'],
-            ['id' => 5, 'name' => 'fifth', 'price' => 4.99, 'images' => '/images/dragon5.png'],
-            ['id' => 6, 'name' => 'sixth', 'price' => 12.99, 'images' => '/images/dragon6.png'],
-        ];
-    }
     /**
      * Display a listing of the resource.
      *
@@ -24,9 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('product.index', [
-            'products' => self::getData(),
-        ]);
+        $products = DB::select('select * from products');
+        return view('product.index', ['products'=>$products]);
     }
 
     /**
