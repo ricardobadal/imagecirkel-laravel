@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,14 +16,18 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Auth::routes();
-
 //HomeController Routes
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/shop', [HomeController::class, 'shop'])->name('home.shop');
 Route::get('/about', [HomeController::class, 'about'])->name('home.about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 
+//Register & Login Routes
+Auth::routes();
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+//User CRUD Routes
+Route::resource('users', UserController::class);
+
 //ProductController Routes
-Route::get('/search', [ProductController::class, 'search'])->name('home.search');
-Route::resource('/product', ProductController::class);
+Route::resource('products', ProductController::class);
