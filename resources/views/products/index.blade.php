@@ -3,6 +3,17 @@
 @section('content')
 @section('title', 'Products')
 
+<div class="container-fluid">
+    <div class="row text-center p-3">
+        <div class="col bg-alert text-dark">
+            <h2>Buy Now and go Broke!!</h2>
+        </div>
+        <div class="alert alert-warning text-danger p-1" role="alert">
+            <h1>SPECIAL DEAL ONLY TODAY!!</h1><sub>ok... and maybe tomorrow!</sub>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
         @foreach ($products as $product)
