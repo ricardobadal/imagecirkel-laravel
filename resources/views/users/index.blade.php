@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         @foreach ($users as $user)
-        <div class="col-md-3 p-2 product-col shadow">
+        <div class="col-md-3 p-2 product-col">
             <div class="card">
                 <div class="card-body text-center">
                     <h5 class="card-title text-style">{{ $user->id }}</h5>

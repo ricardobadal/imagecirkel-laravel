@@ -29,5 +29,5 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 //User CRUD Routes
 Route::resource('users', UserController::class);
 
-//ProductController Routes
+//Product CRUD Routes
 Route::resource('products', ProductController::class);
