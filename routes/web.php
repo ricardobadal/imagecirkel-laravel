@@ -24,4 +24,5 @@ Route::get('/about', [HomeController::class, 'about'])->name('home.about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 
 //ProductController Routes
+Route::get('/search', [ProductController::class, 'search'])->name('home.search');
 Route::resource('/product', ProductController::class);

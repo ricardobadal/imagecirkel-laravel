@@ -10,19 +10,22 @@
     </div>
 </div>
 
-@foreach($products as $product)
-    <div class="container-fluid" id="itemApp">     
-        <div class="product-card p-4 shadow">
-            <p class="clearfix pt-3">
-                <div class="product-name display-5 text-danger">{{ $product->name }}</div>
-                    <div>
-                        <img class="product-image " src="images/webshop/{{ $product->image }}" width="100%">
-                    </div>
-                    <p><i>{{ $product->details }}</i></p>
-                <div class="product-price text-center"><h1>${{ $product->price}},-</h1></div>
-            </p>
+<div class="container">
+    <div class="row">
+    @foreach ($products as $product)
+        <div class="col-md-3 p-2 product-col shadow">
+            <div class="card">
+                <img src="/images/webshop/{{ $product->image }}" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-style">{{ $product->name }}</h5>
+                    <p class="details alert-warning text-danger ">{{ $product->details }}</p>
+                    <p class="price text-style"> &euro; {{ $product->price }}</p>
+                    <input type="button" class="btn btn-outline-danger submit-button"  value="Add to cart">
+                </div>
+            </div>
         </div>
+    @endforeach
     </div>
-@endforeach
+</div>
 
 @endsection
