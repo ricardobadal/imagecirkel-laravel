@@ -15,8 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = DB::select('select * from users');
-        return view('users.index', ['users'=>$users]);
+        $users = User::all();
+        return view('users.index', ['users' => $users]);
     }
 
     /**
@@ -48,7 +48,9 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return view('users.show');
+        return view('users.show', [
+            'user' => User::find($id)
+        ]);
     }
 
     /**
@@ -59,7 +61,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        return view('users.edit');
+        // return view('users.edit', [
+        // 'user' => User::destroy($id)
+        // ]);
     }
 
     /**

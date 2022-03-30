@@ -5,8 +5,7 @@
 
 <div class="container">
     <div class="row">
-        <h1>Create productspage
-        </h1>
+        <h1>Create productspage</h1>
     </div>
 </div>
 
