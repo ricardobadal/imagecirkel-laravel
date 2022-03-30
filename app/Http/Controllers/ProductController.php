@@ -9,35 +9,23 @@ use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $products = DB::select('select * from products');
-        return view('products.index', ['products'=>$products]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('products.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        $product = Product::all();
+        return view('products.index', ['products' => $product]);
     }
 
     /**
@@ -46,9 +34,11 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        return view('products.show');
+        return view('products.show', [
+            'product' => Product::find($id)
+        ]);
     }
 
     /**
@@ -59,7 +49,9 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.edit');
+        // return view('products.edit', [
+        // 'product' => Product::find('$id')
+        // ]);
     }
 
     /**

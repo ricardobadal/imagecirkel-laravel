@@ -16,18 +16,22 @@ use App\Http\Controllers\UserController;
 |
 */
 
-//HomeController Routes
-Route::get('/', [HomeController::class, 'index'])->name('home.index');
-Route::get('/shop', [HomeController::class, 'shop'])->name('home.shop');
-Route::get('/about', [HomeController::class, 'about'])->name('home.about');
-Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
-
 //Register & Login Routes
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-//User CRUD Routes
-Route::resource('users', UserController::class);
+//HomeController Routes
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/about', [HomeController::class, 'about'])->name('home.about');
+Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
+Route::get('/cart', [HomeController::class, 'cart'])->name('home.cart');
 
-//Product CRUD Routes
-Route::resource('products', ProductController::class);
+// UserController Routes
+Route::get('users', [UserController::class, 'index'])->name('users.index'); //view all users
+Route::get('users/{id}', [UserController::class, 'show'])->name('users.show'); //view single user
+Route::get('users/{id}/edit', [UserController::class, 'update'])->name('users.edit'); //view edit user
+//Route::get('users/{id}/delete', [UserController::class]);
+
+//Testing Resource Product CRUD Routes (use php artisan route:list to view created routes)
+Route::get('products', [ProductController::class, 'index'])->name('products.index');
+Route::get('products/{id}', [ProductController::class, 'show'])->name('products.show');

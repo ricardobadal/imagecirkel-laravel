@@ -5,8 +5,16 @@
 
 <div class="container">
     <div class="row">
-        <h1>Show userpage
-        </h1>
+        <div class="col-md-3 p-2 product-col">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-style">{{ $user->id }}</h5>
+                    <p class="details alert-warning text-danger ">{{ $user->name }}</p>
+                    <p class="price text-style">{{ $user->email }}</p>
+                    <div class="btn btn-outline-danger "><a href="{{ $user->id }}/edit">edit</a></div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

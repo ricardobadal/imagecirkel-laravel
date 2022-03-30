@@ -5,8 +5,7 @@
 
 <div class="container">
     <div class="row">
-        <h1>Edit userpage
-        </h1>
+        <h1>Edit userpage</h1>
     </div>
 </div>
 

@@ -49,6 +49,10 @@
                         <a class="nav-link active nav-button" aria-current="page" href="{{ route('home.about') }}">About
                             Us</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-button" aria-current="page"
+                            href="{{ route('home.cart') }}">Cart</a>
+                    </li>
                 </ul>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li class="nav-item dropdown">
@@ -58,20 +62,15 @@
                 </ul>
             </div>
 
-            {{-- search needs to go to the right with the shoppingbasket. Searchform needs to have a magnifier instead of 'searchtext'  --}}
-
-            <ul>
-                <li>
-                    <div class="input-group rounded mt-4">
-                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                            aria-describedby="search-addon" />
-                        <span class="input-group-text border-0" id="search-addon">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </div>
-                </li>
-            </ul>
-
+            <div>
+                <div class="input-group rounded mt-4">
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                        aria-describedby="search-addon" />
+                    <span class="input-group-text border-0" id="search-addon">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+            </div>
 
             @guest
             @if (Route::has('login'))
@@ -106,7 +105,7 @@
     </main>
 
     <div>
-        <footer>This is our Big-Footer</footer>
+        <footer class="row justify-content-center display-5">This is our Big-Footer</footer>
     </div>
 </body>
 
